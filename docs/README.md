@@ -48,9 +48,8 @@ String convertPrizeString(String prize)
 final InputView inputView
 final OuputView outputView
 final Shop shop
-final LottoCompany lottoCompany
+LottoCompany lottoCompany
 List<Lottos> payedLottos
-WinLotto winLotto
 
 // constructor
 this.
