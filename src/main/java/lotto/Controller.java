@@ -27,5 +27,11 @@ public class Controller {
         outputView.printPayedLotto(payedLottos);
         return payedLotto;
     }
-    
+
+    public WinLotto setWinLotto() {
+        List<Integer> winLottoNumber = inputView.getWinLottoNumber();
+        int bonusNumber = inputView.getBonusNumber();
+        return shop.getWinLotto(winLottoNumber,bonusNumber);
+    }
+
 }
