@@ -12,7 +12,7 @@ public class InputView {
     public int getPayedMoney() {
         System.out.println(Constant.inputPayingMoney);
         String input = Console.readLine();
-        moneyTypeValidate(input);
+        numberTypeValidate(input);
         return Integer.parseInt(input);
     }
 
@@ -26,10 +26,13 @@ public class InputView {
     }
 
     public int getBonusNumber() {
-
+        System.out.println(Constant.inputBonusNum);
+        String input = Console.readLine();
+        numberTypeValidate(input);
+        return Integer.parseInt(input);
     }
 
-    private void moneyTypeValidate(String input) {
+    private void numberTypeValidate(String input) {
         try {
             Integer.parseInt(input);
         } catch (NumberFormatException e) {
