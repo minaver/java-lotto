@@ -15,29 +15,31 @@ public class Controller {
     private LottoCompany lottoCompany;
     private int payedMoney;
 
-    public Controller(InputView inputView, OutputView outputView, Shop shop) {
-        this.inputView = inputView;
-        this.outputView = outputView;
-        this.shop = shop;
+    public Controller() {
+        this.inputView = new InputView();
+        this.outputView = new OutputView();
+        this.shop = new Shop(new LottoGenerator());
     }
 
-    public List<Lotto> getLottos() {
+    public List<Lotto> getLottos() throws Exception {
         payedMoney = inputView.getPayedMoney();
         List<Lotto> payedLotto = shop.getPayedLotto(payedMoney);
         outputView.printPayedLotto(payedLotto);
         return payedLotto;
     }
 
-    public void setWinLotto() {
+    public void setWinLotto() throws Exception {
         List<Integer> winLottoNumber = inputView.getWinLottoNumber();
         int bonusNumber = inputView.getBonusNumber();
         WinLotto winLotto = shop.getWinLotto(winLottoNumber, bonusNumber);
         lottoCompany = new LottoCompany(winLotto);
     }
 
-    public void getStats(List<Lotto> payedLottos) {
+    public void getStats(List<Lotto> payedLottos) throws Exception {
         Map<Grade, Integer> winStats = lottoCompany.getWinStats(payedLottos);
-        lottoCompany.getEarningRate(payedMoney,winStats);
+        Double earningRate = lottoCompany.getEarningRate(payedMoney, winStats);
+        outputView.printWinStats(winStats);
+        outputView.printEarningRate(earningRate);
     }
 
 }
