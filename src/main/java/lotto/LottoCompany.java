@@ -32,6 +32,7 @@ public class LottoCompany {
     }
 
     private void initWinStats() {
+        winStats = new HashMap<>();
         winStats.put(Grade.first,0);
         winStats.put(Grade.second,0);
         winStats.put(Grade.third,0);
