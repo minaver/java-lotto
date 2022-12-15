@@ -20,8 +20,11 @@ public class Constant {
 
     public static final String outputPayedLotto = "개를 구매했습니다.";
     public static final String outputWinStatTitle = "당첨 통계\n---";
-    public static final String outputWinStat = "%d개 일치 (%s원) - %d개\n";
-    public static final String outputWinStatBonus = "%d개 일치, 보너스 볼 일치 (%s원) - %d개\n";
+    public static final String outputWinStat = "%d개 일치 (%s원) - %d개\n"
+            + "%d개 일치 (%s원) - %d개\n"
+            + "%d개 일치 (%s원) - %d개\n"
+            + "%d개 일치, 보너스 볼 일치 (%s원) - %d개\n"
+            + "%d개 일치 (%s원) - %d개\n";
     public static final String outputTotalEarningRateStart = "총 수익률은 ";
     public static final String outputTotalEarningRateEnd = "%입니다.";
 
