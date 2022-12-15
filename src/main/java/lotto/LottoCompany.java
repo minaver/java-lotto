@@ -88,6 +88,6 @@ public class LottoCompany {
     }
 
     private Double calcEarningRate(int money, int earningMoney) {
-        return Math.round((earningMoney/(double)money) * 10000)/100.0;
+        return Math.round((earningMoney/(double)money) * 1000)/10.0;
     }
 }
