@@ -18,7 +18,9 @@ public class Shop {
     }
 
     public WinLotto getWinLotto(List<Integer> targetNumber, int bonusNumber) {
-        return null;
+        bonusNumValidate(bonusNumber);
+        Lotto winLotto = lottoGenerator.generateLotto(targetNumber);
+        return new WinLotto(winLotto,bonusNumber);
     }
 
 
