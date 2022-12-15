@@ -1,6 +1,7 @@
 package lotto;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Lotto {
     private final List<Integer> numbers;
@@ -8,6 +9,7 @@ public class Lotto {
     public Lotto(List<Integer> numbers) {
         validate(numbers);
         numRangeValidate(numbers);
+        numOverlapValidation(numbers);
         this.numbers = numbers;
     }
 
@@ -30,6 +32,15 @@ public class Lotto {
                 throw new IllegalArgumentException();
             }
         }
+    }
+
+    private void numOverlapValidation(List<Integer> numbers) {
+        int setSize = numbers.stream().collect(Collectors.toSet()).size();
+        if (numbers.size() != setSize) {
+            System.out.println(Constant.errorOverlapLottoNumber);
+            throw new IllegalArgumentException();
+        }
+
     }
 
 }
