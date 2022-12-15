@@ -23,7 +23,7 @@ public class OutputView {
     public void printWinStats(Map<Grade,Integer> winStats) {
         System.out.println(Constant.outputWinStatTitle);
         System.out.printf(Constant.outputWinStat,
-                Grade.fifth.correct(),convertPrizeString(String.valueOf(Grade.fifth.number())), winStats.get(Grade.first),
+                Grade.fifth.correct(),convertPrizeString(String.valueOf(Grade.fifth.number())), winStats.get(Grade.fifth),
                 Grade.forth.correct(),convertPrizeString(String.valueOf(Grade.forth.number())), winStats.get(Grade.forth),
                 Grade.third.correct(),convertPrizeString(String.valueOf(Grade.third.number())), winStats.get(Grade.third),
                 Grade.second.correct(),convertPrizeString(String.valueOf(Grade.second.number())), winStats.get(Grade.second),
