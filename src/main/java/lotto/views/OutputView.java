@@ -36,7 +36,8 @@ public class OutputView {
     }
 
     public void printEarningRate(Double earningRate) {
-
+        System.out.print(Constant.outputTotalEarningRateStart + earningRate
+                + Constant.outputTotalEarningRateEnd);
     }
 
     private String convertPrizeString(String prize) {
