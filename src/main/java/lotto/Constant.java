@@ -29,4 +29,6 @@ public class Constant {
     public static final String errorSmallSizeMoney = "[ERROR] 금액이 너무 적습니다.";
     public static final String errorWrongSizeMoney = "[ERROR] 로또를 살수 없는 금액입니다.";
     public static final String errorWrongBonusNum = "[ERROR] 잘못된 보너스 숫자입니다.";
+    public static final String errorWrongSizeLottoNumber = "[ERROR] 로또 번호의 길이가 잘못되었습니다.";
+    public static final String errorWrongRangeLottoNumber = "[ERROR] 잘못된 범위의 로또번호가 존재합니다.";
 }
