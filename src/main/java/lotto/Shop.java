@@ -41,7 +41,7 @@ public class Shop {
             System.out.println(Constant.errorSmallSizeMoney);
             throw new IllegalArgumentException();
         }
-        if (money % Constant.moneyUnit == 0) {
+        if (money % Constant.moneyUnit != 0) {
             System.out.println(Constant.errorWrongSizeMoney);
             throw new IllegalArgumentException();
         }
