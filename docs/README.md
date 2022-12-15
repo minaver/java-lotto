@@ -121,14 +121,21 @@ public Lotto generateLotto(List<Integer> targetNumber) : 로또를 원하는 숫
 ```
 [field]<br>
 WinLotto winLotto
+Map<Grade,Integer> winStats
 
 [constructor]<br>
 this.
+initWinStats()
 
 [method]<br>
 public Map<Grade,Integer> getWinStats(List<Lotto> payedLotto) : 당첨 통계 파악 (Logic.3)
 public Double getEarningRate(int money, Map<Grade,Integer> winStats) : 수익률 파악 (Logic.4)
 
+private void initWinStats() : winStats 초기화
+private int compareToWinLotto(Lotto lotto) : WinLotto와 중복되는 숫자 수 확인
+private boolean compareBonusNumber(Lotto lotto) : 보너스 수와 일치하는 수 존재 확인 
+private Grade chooseGrade(int count, boolean isBonus) : Grade 판단
+private Grade chooseSecondThirdGrade(boolean isBonus) : 보너스 수로 2등, 3등 판단
 private int calcTotalEarningMoney(Map<Grade,Integer> winStats)
 private int calcEarningRate(int money, int earningMoney)
 
