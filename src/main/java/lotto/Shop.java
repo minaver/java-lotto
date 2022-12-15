@@ -48,6 +48,10 @@ public class Shop {
     }
 
     private void bonusNumValidate(int bonusNumber) {
-
+        if (bonusNumber < Constant.lottoNumRangeStart
+                || bonusNumber > Constant.lottoNumRangeEnd) {
+            System.out.println(Constant.errorWrongBonusNum);
+            throw new IllegalArgumentException();
+        }
     }
 }
