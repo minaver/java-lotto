@@ -82,10 +82,9 @@ public class LottoCompany {
     }
 
     private int calcTotalEarningMoney(Map<Grade,Integer> winStats) {
-        winStats.entrySet().stream()
+        return winStats.entrySet().stream()
                 .filter(v -> v.getValue() != 0)
                 .collect(Collectors.summingInt(v -> v.getKey().number()));
-        return 0;
     }
 
     private Double calcEarningRate(int money, int earningMoney) {
