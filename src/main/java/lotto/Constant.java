@@ -18,7 +18,7 @@ public class Constant {
     public static final String inputWinLottoNum = "당첨 번호를 입력해 주세요.";
     public static final String inputBonusNum = "보너스 번호를 입력해 주세요.";
 
-    public static final String outputPayedLotto = "8개를 구매했습니다.";
+    public static final String outputPayedLotto = "개를 구매했습니다.";
     public static final String outputWinStat = "당첨 통계\n---\n";
 
     public static final String errorInvalidTypeMoney = "[ERROR] 잘못된 타입입니다.";
