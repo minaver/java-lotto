@@ -13,7 +13,7 @@ public class Application {
             controller.setWinLotto();
             controller.getStats(payedLotto);
         } catch (Exception exception) {
-            exception.printStackTrace();
+            return;
         }
     }
 }
