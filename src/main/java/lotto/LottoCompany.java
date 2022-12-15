@@ -45,7 +45,7 @@ public class LottoCompany {
         int count = 0;
         Lotto winLotto = winLottoInfo.getWinLotto();
         for (int i = 0; i < Constant.lottoSize; i++) {
-            if (winLotto.getNumbers().get(i).equals(lotto.getNumbers().get(i))) {
+            if (winLotto.getNumbers().contains(lotto.getNumbers().get(i))) {
                 count++;
             }
         }
