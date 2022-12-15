@@ -19,7 +19,8 @@ public class LottoCompany {
     }
 
     public Double getEarningRate(int money, Map<Grade,Integer> winStats) {
-        return null;
+        int earningMoney = calcTotalEarningMoney(winStats);
+        return calcEarningRate(money, earningMoney);
     }
 
     private int calcTotalEarningMoney(Map<Grade,Integer> winStats) {
