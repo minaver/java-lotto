@@ -31,6 +31,7 @@ Enum : Grade<br>
 int getPayedMoney()
 List<Integer> getWinLottoNumber()
 int getBonusNumber()
+void numberTypeValidate(String input)
 ```
 
 ### OutputView
@@ -38,6 +39,7 @@ int getBonusNumber()
 void printPayedLotto(List<Lotto> payedLottos)
 void printWinStats(Map<Grade,Integer> winStats)
 void printEarningRate(Double earningRate)
+String convertPrizeString(String prize)
 ```
 
 ### Controller
@@ -79,10 +81,12 @@ List<Integer> numbers : 중복되지 않는 6개의 숫자 리스트
 
 [constructor]<br>
 validate(numbers)
+numRangeValidate(numbers)
 this.
 
 [method]<br>
 private void validate(List<Integer> numbers) : List 요소 수가 6개인지 확인
+private void numRangeValidate(List<Integer> numbers)
 ```
 
 
@@ -154,11 +158,12 @@ int bonusNumber
 ### Grade
 ```
 [field]<br>
-first(2000000000)
-second(30000000)
-third(1500000)
-forth(50000)
-fifth(5000)
+first(6,2000000000),
+second(5,30000000),
+third(5,1500000),
+forth(4,50000),
+fifth(3,5000),
+none(0,0)
 
 [constructor]<br>
 
