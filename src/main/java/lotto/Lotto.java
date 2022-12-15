@@ -7,17 +7,29 @@ public class Lotto {
 
     public Lotto(List<Integer> numbers) {
         validate(numbers);
+        numRangeValidate(numbers);
         this.numbers = numbers;
+    }
+
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 
     private void validate(List<Integer> numbers) {
         if (numbers.size() != 6) {
+            System.out.println(Constant.errorWrongSizeLottoNumber);
             throw new IllegalArgumentException();
         }
     }
 
-    // TODO: 추가 기능 구현
-    public List<Integer> getNumbers() {
-        return numbers;
+    private void numRangeValidate(List<Integer> numbers) {
+        for (int number : numbers) {
+            if (number < Constant.lottoNumRangeStart
+                    || number > Constant.lottoNumRangeEnd) {
+                System.out.println(Constant.errorWrongRangeLottoNumber);
+                throw new IllegalArgumentException();
+            }
+        }
     }
+
 }
