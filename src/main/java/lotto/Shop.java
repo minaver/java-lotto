@@ -2,6 +2,7 @@ package lotto;
 
 import lotto.vo.WinLotto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Shop {
@@ -12,12 +13,21 @@ public class Shop {
     }
 
     public List<Lotto> getPayedLotto(int money) {
-
-        return null;
+        moneySizeValidate(money);
+        return getRandomLottos(getLottoCount(money));
     }
 
     public WinLotto getWinLotto(List<Integer> targetNumber, int bonusNumber) {
         return null;
+    }
+
+
+    private List<Lotto> getRandomLottos(int count) {
+        List<Lotto> payedLottos = new ArrayList<>();
+        for (int i = 0; i < count ; i++) {
+            payedLottos.add(lottoGenerator.generateLottoRandom());
+        }
+        return payedLottos;
     }
 
     private int getLottoCount(int money) {
@@ -33,10 +43,6 @@ public class Shop {
             System.out.println(Constant.errorWrongSizeMoney);
             throw new IllegalArgumentException();
         }
-    }
-
-    private void moneyTypeValidate(int money) {
-
     }
 
     private void bonusNumValidate(int bonusNumber) {
